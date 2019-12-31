@@ -61,25 +61,38 @@
 </head>
 <body>
     <div class="layui-fluid">
-        <div class="layui-layout">
-            <div class="layui-header">
-                <div class="page-wb page-header">
-                    <div class="layui-nav page-left">
-                        <ul class="layui-container">
-                            <li class="layui-nav-item layui-this navtop"><a href="/">首页</a></li>
-                            <li class="layui-nav-item navtop">
-                                <a href="/Template/List">最新电影</a>
-                            </li>
-                            <li class="layui-nav-item navtop">
-                                <a href="/Template/Single">最新电视剧</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="layui-container">
+            <ul class="layui-nav" lay-filter="">
+                <li class="layui-nav-item layui-this navtop"><a href="/index.html">首页</a></li>
+                <li class="layui-nav-item navtop">
+                    <a href="/jiaocheng/qqtv.html" target="_blank">腾讯网教程</a>
+                </li>
+                <li class="layui-nav-item navtop">
+                    <a href="/jiaocheng/iqiyitv.html" target="_blank">爱奇异教程</a>
+                </li>
+                <li class="layui-nav-item navtop">
+                    <a href="/jiaocheng/youkutv.html" target="_blank">优酷网教程</a>
+                </li>
+                <li class="layui-nav-item navtop">
+                    <a href="/jiaocheng/Single" target="_blank">乐视网教程</a>
+                </li>
+                <li class="layui-nav-item navtop">
+                    <a href="/jiaocheng/Single" target="_blank">芒果网教程</a>
+                </li>
+                <li class="layui-nav-item navtop">
+                    <a href="/jiaocheng/Single" target="_blank">土豆网教程</a>
+                </li>
+                <li class="layui-nav-item navtop">
+                    <a href="/jiaocheng/Single" target="_blank">搜狐网教程</a>
+                </li>
+                <li class="layui-nav-item navtop">
+                    <a href="/jiaocheng/Single" target="_blank">PPTV教程</a>
+                </li>
+            </ul>
         </div>
         <br />
         <div class="layui-container" style="">
+            <h3 style="padding-top:20px;padding-bottom:20px;text-align:center;">免费全网影视VIP视频vip会员免广告看电影！ 若播放异常，刷新，更换接口尝试哦！</h3>
             <div class="dymain">
                 <iframe id="ifrMain" src="dygzh.html" style="width:100%;height:100%;" frameborder="0"></iframe>
             </div>
@@ -123,11 +136,11 @@
             <div class="layui-footer layui-mt30" id="footer">
                 <div class="page-wb layui-clear">
                     <div class="page-left layui-mt5">
-                        <div class="subLogo layui-clear"><a href="/"><img src="/Assets/images/logo.png" height="18" class="page-left"></a><h2>专业的网络资源分享平台</h2></div>
+                        <div class="subLogo layui-clear"><a href="/"><img src="/Assets/images/logo.png" height="18" class="page-left" style="display:none;"></a><h2>网络资源分享平台</h2></div>
                         <p class="layui-mt10">本站资源均来自互联网或会员发布，如果侵犯了您的权益请与我们联系，我们将在24小时内处理！</p>
                     </div>
                     <div class="page-right">
-                        <ul class="footerUl">
+                        <ul class="footerUl" style="display:none;">
                             <li>
                                 <a href="#">商业会员</a>&nbsp;｜&nbsp;
                                 <a href="#">积分获取</a>&nbsp;｜&nbsp;
@@ -148,9 +161,10 @@
     <script>
         var $;
         //Demo
-        layui.use(['jquery', 'form'], function () {
+        layui.use(['jquery', 'form', 'menu'], function () {
             $ = layui.$ //重点处
-            var form = layui.form;
+            var form = layui.form, menu = layui.menu;
+            menu.init();
         });
 
         function onplayer() {
@@ -194,14 +208,6 @@
         }
 
     </script>
-    <script>
-        var cnzz_s_tag = document.createElement('script');
-        cnzz_s_tag.type = "text/javascript";
-        cnzz_s_tag.async = true;
-        cnzz_s_tag.charset = "utf-8";
-        cnzz_s_tag.src = "http://w.cnzz.com/c.php?id=1278528366&async=1";
-        var root_s = document.getElementsByTagName('script')[0];
-        root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
-    </script>
+    <script type="text/javascript" src="assets/js/common.js"></script>
 </body>
 </html>
